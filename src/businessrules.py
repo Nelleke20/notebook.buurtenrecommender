@@ -21,13 +21,17 @@ class BusinessRules:
 
         # business-rule 1: check if feature one is bigger than
         if X[0][0] > 350:
+            prediction_type = 'business rule 1'
             logging.info("based on business rule 1")
-            return 2000
+            return {'prediction_type': prediction_type,
+                    'prediction': 'inboedel'}
 
         # business-rule 2: check if feature two is bigger than
         elif X[0][1] > 12:
+            prediction_type = 'business rule 2'
             logging.info("based on business rule 2")
-            return 2000
+            return {'prediction_type': prediction_type,
+                    'prediction': 'woonhuis'}            
 
         # when no business-rule is applicable, we pass it to the ML-model
         else:

@@ -19,8 +19,10 @@ class ModelPred(rules.BusinessRules):
 
     def apply_model_prediction(self, X):
         logging.info("second we will apply the ml-model for the hard-cases...")
+        prediction_type = 'model_voorspelling'
         output = self._model.predict(X)
-        return output
+        return {'prediction_type': prediction_type,
+                'prediction': output}
 
     def predict(self, X):
         X_prep = self.prepare_dataset(X)
