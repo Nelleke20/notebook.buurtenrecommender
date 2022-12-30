@@ -30,7 +30,10 @@ class BuurtenModel(rules.BusinessRulesOne, rules.BusinessRulesTwo):
         # return {'prediction_type_one': prediction_type,
         #         'prediction_one': output[0]}
 
-    def apply_model_prediction_two(self, X, ):
+    def apply_model_prediction_two(
+        self,
+        X,
+    ):
         logging.info("second we will apply the ml-model for the hard-cases...")
         output = self._model_two.predict(X)
         return output[0]
@@ -42,17 +45,19 @@ class BuurtenModel(rules.BusinessRulesOne, rules.BusinessRulesTwo):
 
         # PART ONE: apply first business rules and model
         output_step_one = self.apply_business_rules_one(X_prep)
-        output_step_one['prediction_one'] = [
-            output_step_one['prediction_one'] if
-            output_step_one['prediction_type_one'] != 'model_voorspelling' else
-            self.apply_model_prediction_one(X_prep)]
+        output_step_one["prediction_one"] = [
+            output_step_one["prediction_one"]
+            if output_step_one["prediction_type_one"] != "model_voorspelling"
+            else self.apply_model_prediction_one(X_prep)
+        ]
 
         # PART TWO: Apply business rules en model for part two
         output_step_two = self.apply_business_rules_two(X_prep, output_step_one)
-    
-        output_step_two['prediction_two'] = [
-            output_step_two['prediction_two'] if
-            output_step_two['prediction_type_two'] != 'model_voorspelling' else
-            self.apply_model_prediction_one(X_prep)]
+
+        output_step_two["prediction_two"] = [
+            output_step_two["prediction_two"]
+            if output_step_two["prediction_type_two"] != "model_voorspelling"
+            else self.apply_model_prediction_one(X_prep)
+        ]
 
         return output_step_two
