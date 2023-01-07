@@ -5,6 +5,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
 import webbrowser
 import os
+import matplotlib.pyplot as plt
 
 @dataclass
 class CreateMap():
@@ -98,12 +99,13 @@ class CosineRecommender():
         merged_df.loc[merged_df['BU_NAAM'] == input_buurt, 'dummy'] = 0         # red
 
         # Maak een thematische kaart
-        p = merged_df.plot(column="dummy",
+        # fig, ax = plt.subplots() 
+        ax = merged_df.plot(column="dummy",
                             figsize = (6,4),
                             cmap='RdYlGn')
-        p.axis('off')
-        p.set_title(f'Voor jouw buurt "{input_buurt}", woorden de volgende buurten geadvisereed:')
-        
+        ax.axis('off')
+        ax.set_title(f'Voor jouw buurt "{input_buurt}", \n adviseren we {recommendations_naam}.')  #
+        plt.savefig('output_recommendations_top_n.png')     
         return 'De volgende buurten zijn aan te raden:', recommendations_naam, code_van_buurt, recommendations
 
 

@@ -13,17 +13,18 @@ import os
 # settings
 file_path_map = 'data/buurt_2020_v3.shp'
 file_path_buurten = 'data/buurten.csv'
-gemeente_selectie = ['Houten', 'Utrecht']
+gemeente_selectie = ['Houten']  # 'Utrecht'
 clean_up = True
-buurt_voor_selectie = 'Poorten'
+buurt_voor_selectie = 'Slagen'
 n_predictions = 5
 features_visualisatie = ['geometry', 'regio', 'buurt_code',  'aantal_inwoners',  'aantal_inwoners_tussen_25_44_percentage', 
 'gemiddelde_huishoudensgrootte', 'woningvoorraad',  'gemiddelde_woningwaarde',  'meergezinswoning_percentage', 
-'bewoond_percentage', 'koopwoning_percentage', 'bouwjaar_vanaf_2000_percentage', 'afstand_tot_grote_supermarkt_km', 
-'afstand_tot_park_of_plantsoen_km', 'afstand_tot_hoofdverkeersweg_km', 'afstand_tot_treinstation_km', 'leefbarometer_score', 
-'aardgasverbruik_m3_gemiddeld', 'elektriciteitsverbruik_kwh_gemiddeld', 'social_economische_score_gemiddeld', 'geluid_van_treinverkeer',
-'geluid_van_weg']
-
+'bewoond_percentage', 'koopwoning_percentage', 'bouwjaar_vanaf_2000_percentage', 
+# 'afstand_tot_grote_supermarkt_km', 
+# 'afstand_tot_park_of_plantsoen_km', 'afstand_tot_hoofdverkeersweg_km', 'afstand_tot_treinstation_km', 'leefbarometer_score', 
+# 'aardgasverbruik_m3_gemiddeld', 'elektriciteitsverbruik_kwh_gemiddeld', 'social_economische_score_gemiddeld', 'geluid_van_treinverkeer',
+# 'geluid_van_weg'
+]
 
 
 ## run main
@@ -58,7 +59,7 @@ recommender = br.CosineRecommender(
         gem_map= gem_map
 )
 
-output, recommendations_naam, code_van_buurt, recommendations  = recommender.list_and_plot_generator(buurt_voor_selectie, n_predictions)
+output, recommendations_naam, code_van_buurt, recommendations, = recommender.list_and_plot_generator(buurt_voor_selectie, n_predictions)
 
 explore = br.ExploreRecommender(    
     gem_map = gem_map, 
@@ -69,5 +70,6 @@ explore = br.ExploreRecommender(
 )
 
 explore = explore.explore_visualizer(features_visualisatie)
-explore.save('recommendations_map.html')
-return webbrowser.open('file://' + os.path.realpath('recommendations_map.html'))
+explore.save('output_interactive_recommendations_map.html')
+
+webbrowser.open('file://' + os.path.realpath('output_interactive_recommendations_map.html'))
