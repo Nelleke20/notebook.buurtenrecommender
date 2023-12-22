@@ -1,4 +1,7 @@
-import src.buurten as br
+import streamlit as st
+import pandas as pd
+import numpy as np
+import buurten as br
 import pandas as pd
 import matplotlib.pyplot as plt
 import ssl
@@ -8,6 +11,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 import webbrowser
 import os
+
+st.title('Buurten recommender')
 
 
 # settings
@@ -70,8 +75,12 @@ explore = br.ExploreRecommender(
 )
 
 explore.to_csv('test.csv')
-
 # explore = explore.explore_visualizer(features_visualisatie)
 # explore.save('output_interactive_recommendations_map.html')
 
 # webbrowser.open('file://' + os.path.realpath('output_interactive_recommendations_map.html'))
+
+
+# data = 
+
+st.map(explore['geometry'])
