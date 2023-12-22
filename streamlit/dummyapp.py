@@ -26,7 +26,7 @@ center = [gdf.centroid.x.mean(), gdf.centroid.y.mean()]
 center_dummy =[52.02721,5.17040]
 m = folium.Map(location=center_dummy, zoom_start=13)
 
-# # Add GeoJSON data to the map
+# # Add GeoJSON data to the map 
 # for _, row in gdf.iterrows():
 #     geojson_data = row['geometry'].__geo_interface__
 #     print(geojson_data)  # Print GeoJSON data for each polygon
