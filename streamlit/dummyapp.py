@@ -13,23 +13,15 @@ import numpy as np
 import webbrowser
 import os
 import folium
+import streamlit.components.v1 as components
+
 st.title('Buurten recommender')
 
-file_path = '../notebooks/test.shp'
-explore = gpd.read_file(file_path)
+with open('recommendations_map.html', 'r') as f:
+    html_map = f.read()
 
-# Create a GeoDataFrame
-gdf = gpd.GeoDataFrame(explore, geometry=explore['geometry'])
+components.html(html_map, height=600, width=700)
 
-# Create a Folium map centered around the mean coordinates
-center = [gdf.centroid.x.mean(), gdf.centroid.y.mean()]
-center_dummy =[52.02721,5.17040]
-m = folium.Map(location=center_dummy, zoom_start=13)
-
-# # Add GeoJSON data to the map 
-# for _, row in gdf.iterrows():
-#     geojson_data = row['geometry'].__geo_interface__
-#     print(geojson_data)  # Print GeoJSON data for each polygon
-#     folium.GeoJson(geojson_data).add_to(m)
-
-st_data = folium_static(m, width=725)
+with st.sidebar:
+    st.title('Set the input features here: ')
+    st.slider('How many buurten to predict', 0, 10, 1)
