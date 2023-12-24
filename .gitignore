@@ -1,2 +1,5 @@
 venv
 data
+streamlit/map/
+fastapi/app/output.html
+fastapi/app/output_recommendations_top_n.png
