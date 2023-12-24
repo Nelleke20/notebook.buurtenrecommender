@@ -14,8 +14,8 @@ import requests
 import html
 from bs4 import BeautifulSoup
 def get_prediction(analyse_gebied, buurt, features, aantal_voorspellingen):
-    url = "http://0.0.0.0:8000/predict"
-    # url = "http://fastapp:8000/predict"
+    # url = "http://0.0.0.0:8000/predict" #local testing
+    url = "http://fastapp:8000/predict"
     data = {
             "analyse_gebied": analyse_gebied,
             "buurt": buurt,
