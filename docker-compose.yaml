@@ -20,6 +20,6 @@ services:
         aliases:
           - streamlit.docker
 networks:
-  goalnetwork:
+  buurten:
     external:
       name: "buurtnetwork"
