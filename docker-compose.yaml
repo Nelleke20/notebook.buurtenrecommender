@@ -4,7 +4,8 @@ services:
   fastapp:
     build: fastapi
     ports:
-      - 8000:8000
+      - "8000:8000"
+      # - "172.21.0.2:8000:8000"    
     networks:
       buurten:
         aliases:
@@ -12,13 +13,15 @@ services:
   streamlit:
     build: streamlit
     ports:
-      - 8501:8501
+      - "8501:8501"
+      # - "172.21.0.3:8501:8501"        
     depends_on:
       - fastapp
     networks:
       buurten:
         aliases:
           - streamlit.docker
+           
 networks:
   buurten:
     external:
