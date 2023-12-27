@@ -21,7 +21,6 @@ provincie_utrecht_gemeente =['Amersfoort','Baarn', 'Bunnik', 'Bunschoten', 'De B
     'Oudewater','Renswoude', 'Rhenen', 'Soest', 'Stichtse Vecht', 'Utrecht', 'Utrechtse Heuvelrug',
     'Veenendaal', 'Vijfheerenlanden', 'Wijk bij Duurstede', 'Woerden', 'Woudenberg', 'IJsselstein',
     'Zeist']
-
 deel_provincie_utrecht = ['De Bilt', 'Houten', 'Nieuwegein', 'Utrecht', 'Zeist']
 visualisatie_features = ['aantal_inwoners', 'koopwoning_percentage', 'gemiddelde_woningwaarde', 
                          'leefbarometer_score', 'social_economische_score_gemiddeld']
