@@ -65,6 +65,7 @@ oauthlib==3.2.2
 packaging==23.2
 pandas==1.5.3
 parso==0.8.3
+pathlib==1.0.1
 pexpect==4.9.0
 pickleshare==0.7.5
 Pillow==10.1.0

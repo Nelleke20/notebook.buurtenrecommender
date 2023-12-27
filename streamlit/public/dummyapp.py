@@ -20,6 +20,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
 import matplotlib.pyplot as plt
 from pyogrio import read_dataframe
+from pathlib import Path
 
 # flexible dropping list
 drop_buurten_houten = ['Buitengebied Houten West', 'Buitengebied Houten Oost', "Dorp 't Goy", "'t Goyse Dorp",
@@ -157,8 +158,10 @@ class ExploreRecommender():
 
 
 def get_prediction(analyse_gebied, buurt, features, aantal_voorspellingen):
+
+    buurten_path = Path(__file__).parent / "dataexception/buurten.csv"
     file_path_map = 'dataexception/map/buurt_2020_v3.shp'
-    buurten = pd.read_csv('dataexception/buurten.csv', index_col=0)
+    buurten = pd.read_csv(buurten_path, index_col=0)
     gemeente_selectie = [analyse_gebied]  
     buurt_voor_selectie = buurt
     n_predictions = aantal_voorspellingen
