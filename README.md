@@ -1,18 +1,27 @@
 ### Introduction
-Still trying to look for a house and somethimes we pass a very nicce neighborhoud. So the question I tried to answer was, if we like a neighborhood; can we find others that are look a likes?  This way creating a recommender for neighborhoods, based on specific demographics of the place.
+Still trying to look for a house and somethimes we pass a very nice neighborhoud. So the question I tried to answer was, if we like specific buurt in our province; can we find others that are look a likes?  
+This way creating a recommendersytem for buurten; based on specific demographics of the place.
 
 #### Starting date
 Dec 1, 2022
 
 #### Context
-..
-input sources: WIP 
+To be able to analyse what several aspects within 'buurten', I collected data from several sources:
+Open CBS data: https://www.cbs.nl/nl-nl/achtergrond/2022/14/statusscore-per-wijk-en-buurt-o-b-v-welvaart-opleidingsniveau-en-arbeid
+leefbarometer score: https://www.leefbaarometer.nl/tabel.php?indicator=Leefbaarheidssituatie&schaal=Buurt&gemeente=GM0344
+geluidsblootstelling: https://statline.rivm.nl/portal.html?_la=nl&_catalog=RIVM&tableId=50066NED&_theme=96
+woningvoorraad: https://opendata.cbs.nl/statline/#/CBS/nl/dataset/83704NED/table
+tevredenheidscores: https://opendata.cbs.nl/statline/#/CBS/en/dataset/84571ENG/table
+
+*input eatures used:
 
 #### Results
-..
+
 
 #### Application
-To ..
-
+Two options
+1. demo streamlit app via cloud available :demo folder
+2. docker compose up run local app with fastapi backend and streamlit frontend.
+   
 #### Tech and Tools
-..
+recommender systemts, streamlit, fastapi
