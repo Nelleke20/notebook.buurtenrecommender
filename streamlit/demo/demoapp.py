@@ -33,8 +33,8 @@ drop_buurten_houten = ['Buitengebied Houten West', 'Buitengebied Houten Oost', "
 
 ########### PREDICTION SCRIPT #################
 def get_prediction(analyse_gebied, buurt, features, aantal_voorspellingen):
-    buurten_path = Path(__file__).parent / "dataexception/buurten.csv"
-    map_path = Path(__file__).parent / "dataexception/map/buurt_2020_v3.shp"
+    buurten_path = Path(__file__).parent / "demodata/buurten.csv"
+    map_path = Path(__file__).parent / "demodata/map/buurt_2020_v3.shp"
     buurten = pd.read_csv(buurten_path, index_col=0)
     gemeente_selectie = [analyse_gebied]  
     buurt_voor_selectie = buurt
