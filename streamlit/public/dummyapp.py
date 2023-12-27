@@ -160,7 +160,7 @@ class ExploreRecommender():
 def get_prediction(analyse_gebied, buurt, features, aantal_voorspellingen):
 
     buurten_path = Path(__file__).parent / "dataexception/buurten.csv"
-    file_path_map = 'dataexception/map/buurt_2020_v3.shp'
+    map_path = Path(__file__).parent / "dataexception/map/buurt_2020_v3.shp"
     buurten = pd.read_csv(buurten_path, index_col=0)
     gemeente_selectie = [analyse_gebied]  
     buurt_voor_selectie = buurt
@@ -168,7 +168,7 @@ def get_prediction(analyse_gebied, buurt, features, aantal_voorspellingen):
     features_visualisatie = features.extend(['geometry', 'regio', 'buurt_code'])
 
     ## run main
-    map = CreateMap(file_path =file_path_map, 
+    map = CreateMap(file_path =map_path, 
                     feature_column ='GM_NAAM', 
                     feature_selection=gemeente_selectie, 
                     feature_map_drop = 'BU_NAAM',
