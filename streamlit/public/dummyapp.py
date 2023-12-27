@@ -157,8 +157,8 @@ class ExploreRecommender():
 
 
 def get_prediction(analyse_gebied, buurt, features, aantal_voorspellingen):
-    file_path_map = 'map/buurt_2020_v3.shp'
-    buurten = pd.read_csv('buurten.csv', index_col=0)
+    file_path_map = 'dataexception/map/buurt_2020_v3.shp'
+    buurten = pd.read_csv('dataexception/buurten.csv', index_col=0)
     gemeente_selectie = [analyse_gebied]  
     buurt_voor_selectie = buurt
     n_predictions = aantal_voorspellingen
