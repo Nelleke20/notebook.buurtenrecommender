@@ -7,6 +7,7 @@ Dec 1, 2022
 
 #### Context
 To be able to analyse what several aspects within 'buurten', I collected data from several sources:
+
 Open CBS data: https://www.cbs.nl/nl-nl/achtergrond/2022/14/statusscore-per-wijk-en-buurt-o-b-v-welvaart-opleidingsniveau-en-arbeid
 
 leefbarometer score: https://www.leefbaarometer.nl/tabel.php?indicator=Leefbaarheidssituatie&schaal=Buurt&gemeente=GM0344
