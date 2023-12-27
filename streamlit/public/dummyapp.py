@@ -31,10 +31,8 @@ drop_buurten_houten = ['Buitengebied Houten West', 'Buitengebied Houten Oost', "
         'Haarzuilens en omgeving', 'Bedrijventerrein en omgeving', 'Utrecht Science Park', 'Bedrijvengebied Strijkviertel', 'Bedrijvengebied Papendorp','Rijnenburg', 'Poldergebied Overvecht']
 
 
-######################## MAIN SCRIPT ########################
-
+########### PREDICTION SCRIPT #################
 def get_prediction(analyse_gebied, buurt, features, aantal_voorspellingen):
-
     buurten_path = Path(__file__).parent / "dataexception/buurten.csv"
     map_path = Path(__file__).parent / "dataexception/map/buurt_2020_v3.shp"
     buurten = pd.read_csv(buurten_path, index_col=0)
@@ -80,6 +78,7 @@ def get_prediction(analyse_gebied, buurt, features, aantal_voorspellingen):
     return map_html  #html as str, later transform
 
 
+########### STREAMLIT SCRIPT #################
 st.title('Buurten recommender')
 input_values=''
 with st.sidebar:
