@@ -26,7 +26,7 @@ To be able to analyse several aspects within 'buurten', I collected data from va
 >    'geluid_van_weg']
 
 #### Results
-For each buurt we recommend 3 neighborhoods that are look a likes based on the input variables above:
+For each buurt we recommend 3 neighborhoods that are look a likes (determined by the cosine similarity score) based on the input variables above:
 
 <p align="center" width="100%">
     <img width="75%" src="img/buurtrecommender.png">
