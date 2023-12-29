@@ -1,6 +1,6 @@
 ### Introduction
-Still trying to look for a house and somethimes we pass a very nice neighborhood. So the question I tried to answer was, if we like specific buurt in our province; can we find others that are look a likes?  
-This way creating a recommendersytem for buurten based on specific demographics of the place.
+As we are still trying to look for a house, we sometimes pass very nice neigborhoods and image living there. When there are not houses available in these neigborhoods, we wished to know other places which are jst as nice. Therefor I decided to build an app which would recommend likeminded neigborhoods. Doesn't that sound very practical?
+So the question I tried to answer was, if we like specific neigborhoods in our province; can we recommend other neigborhoods that are look a likes?  
 
 #### Starting date
 Dec 1, 2022
@@ -14,6 +14,7 @@ To be able to analyse several aspects within 'buurten', I collected data from va
 * Tevredenheidscores: [CBS sociaalecomischescore-datset](https://opendata.cbs.nl/statline/#/CBS/en/dataset/84571ENG/table)
 
 **Input features eventually used:**
+As we have several features that we found important (and based on some EDA), I decided to use the following variables:
 >    ['aantal_inwoners', 'aantal_inwoners_tussen_25_44_percentage',
 >    'aantal_huishoudens_met_kinderen_percentage', 'gemiddelde_huishoudensgrootte', 'woningvoorraad',
 >    'gemiddelde_woningwaarde', 'meergezinswoning_percentage', 'bewoond_percentage', 'koopwoning_percentage',
