@@ -48,8 +48,7 @@ buurt = st.selectbox('Selecteer hieronder je favo-buurt: ',
 
 if buurt != '<select>':
     with st.spinner('Even wachten, de kaart wordt geladen...'):
-        recommender = get_prediction(analyse_gebied, buurt, features, aantal_voorspellingen)
-        response = recommender.get_prediction(buurt)
+        response = get_prediction(analyse_gebied, buurt, features, aantal_voorspellingen)
         html_map = BeautifulSoup(response, "html.parser") 
 
         with open('output.html', 'w', encoding='utf-8') as file:

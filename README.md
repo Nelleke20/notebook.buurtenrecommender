@@ -36,7 +36,7 @@ For each buurt we recommend 3 neighborhoods that are look-a-likes (determined by
 </p>
 
 To visualize relevant info, I decided to select 5 variables that are demonstrated per buurt.
-However, note that the anlaysis is done on all the variables and not just these 5.
+However,do note that the analysis is done on all the variables and not just these 5.
 
 #### Application
 Two options:
