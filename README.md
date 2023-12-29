@@ -18,7 +18,8 @@ woningvoorraad: https://opendata.cbs.nl/statline/#/CBS/nl/dataset/83704NED/table
 
 tevredenheidscores: https://opendata.cbs.nl/statline/#/CBS/en/dataset/84571ENG/table
 
-> input features eventually used:
+input features eventually used:
+
 >    ['buurt_code', 'gm_naam', 'regio', 'aantal_inwoners','aantal_inwoners_tussen_25_44_percentage',
 >    'aantal_huishoudens_met_kinderen_percentage', 'gemiddelde_huishoudensgrootte', 'woningvoorraad',
 >    'gemiddelde_woningwaarde', 'meergezinswoning_percentage', 'bewoond_percentage', 'koopwoning_percentage',
