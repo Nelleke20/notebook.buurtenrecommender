@@ -8,19 +8,15 @@ Dec 1, 2022
 #### Context
 To be able to analyse what several aspects within 'buurten', I collected data from several sources:
 
-Open CBS data: https://www.cbs.nl/nl-nl/achtergrond/2022/14/statusscore-per-wijk-en-buurt-o-b-v-welvaart-opleidingsniveau-en-arbeid
+* Open CBS data: https://www.cbs.nl/nl-nl/achtergrond/2022/14/statusscore-per-wijk-en-buurt-o-b-v-welvaart-opleidingsniveau-en-arbeid
+* Leefbarometer score: https://www.leefbaarometer.nl/tabel.php?indicator=Leefbaarheidssituatie&schaal=Buurt&gemeente=GM0344
+* Geluidsblootstelling: https://statline.rivm.nl/portal.html?_la=nl&_catalog=RIVM&tableId=50066NED&_theme=96
+* Woningvoorraad: https://opendata.cbs.nl/statline/#/CBS/nl/dataset/83704NED/table
+* Tevredenheidscores: https://opendata.cbs.nl/statline/#/CBS/en/dataset/84571ENG/table
 
-leefbarometer score: https://www.leefbaarometer.nl/tabel.php?indicator=Leefbaarheidssituatie&schaal=Buurt&gemeente=GM0344
+**Input features eventually used:**
 
-geluidsblootstelling: https://statline.rivm.nl/portal.html?_la=nl&_catalog=RIVM&tableId=50066NED&_theme=96
-
-woningvoorraad: https://opendata.cbs.nl/statline/#/CBS/nl/dataset/83704NED/table
-
-tevredenheidscores: https://opendata.cbs.nl/statline/#/CBS/en/dataset/84571ENG/table
-
-input features eventually used:
-
->    ['buurt_code', 'gm_naam', 'regio', 'aantal_inwoners','aantal_inwoners_tussen_25_44_percentage',
+>    ['buurt_code', 'gm_naam', 'regio', 'aantal_inwoners', 'aantal_inwoners_tussen_25_44_percentage',
 >    'aantal_huishoudens_met_kinderen_percentage', 'gemiddelde_huishoudensgrootte', 'woningvoorraad',
 >    'gemiddelde_woningwaarde', 'meergezinswoning_percentage', 'bewoond_percentage', 'koopwoning_percentage',
 >    'bouwjaar_vanaf_2000_percentage', 'afstand_tot_ziekenhuis_km', 'afstand_tot_grote_supermarkt_km', 'afstand_tot_cafe_km',
