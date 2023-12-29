@@ -9,3 +9,5 @@ streamlit/*.csv
 .DS_Store
 fastapi/app/buurten.csv
 fastapi/app/map/
+old
+notebooks/old
