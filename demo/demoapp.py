@@ -10,8 +10,8 @@ from utils import Predictor
 bp = Path(__file__).parent / "demodata/buurten.csv"
 mp = Path(__file__).parent / "demodata/map/buurt_2020_v3.shp"
 
-st.title('Buurten recommender')
-buurt = st.selectbox('Welke buurt wil je analyseren?',
+st.title('Buurten Vergelijkings Adviseur')
+buurt = st.selectbox('WElke buurt is je favori buurt wil je analyseren?',
     ('<select>', 'Oud Hoograven-Zuid', 'Voordorp en Voorveldsepolder', 'Slagen', 'Oorden', 'Poorten'))  
 
 if buurt != '<select>':
