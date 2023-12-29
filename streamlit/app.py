@@ -60,7 +60,7 @@ if buurt != '<select>':
 
         if html_map:
             st.markdown('Viola, de volgende 3 buurten lijken op jouw favoriet: ')
-            components.html(html_map, height=600, width=700)
+            components.html(html_map, height=300, width=400) #600 and 700 for web
 else:
     st.markdown('Wat is jouw favoriete buurt? Selecteer je buurt en de vergelijker doet zijn werk...')
     # st.image(image=img, caption="Buurten Vergelijker") 
