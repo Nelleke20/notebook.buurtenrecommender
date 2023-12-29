@@ -30,7 +30,7 @@ def main():
 @app.post("/predict", response_class=HTMLResponse)
 def predict(data: Data):
     file_path_map = 'map/buurt_2020_v3.shp'
-    buurten = pd.read_csv('buurten.csv', index_col=0)
+    buurten = pd.read_csv('buurten.csv', index_col=0)  
     gemeente_selectie = [data.analyse_gebied]  
     buurt_voor_selectie = data.buurt
     n_predictions = data.aantal_voorspellingen

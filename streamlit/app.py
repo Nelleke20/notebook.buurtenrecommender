@@ -14,20 +14,19 @@ import requests
 import html
 from bs4 import BeautifulSoup
 
-# settings
+# settings that can be altered (possible through a form in streamlit but for now only here)
 provincie_utrecht_gemeente =['Amersfoort','Baarn', 'Bunnik', 'Bunschoten', 'De Bilt',
     'De Ronde Venen','Eemnes','Houten', 'Leusden', 'Lopik', 'Montfoort', 'Nieuwegein',
     'Oudewater','Renswoude', 'Rhenen', 'Soest', 'Stichtse Vecht', 'Utrecht', 'Utrechtse Heuvelrug',
     'Veenendaal', 'Vijfheerenlanden', 'Wijk bij Duurstede', 'Woerden', 'Woudenberg', 'IJsselstein',
     'Zeist']
 deel_provincie_utrecht = ['De Bilt', 'Houten', 'Nieuwegein', 'Utrecht', 'Zeist']
-visualisatie_features = ['aantal_inwoners', 'koopwoning_percentage', 'gemiddelde_woningwaarde', 
+features = ['aantal_inwoners', 'koopwoning_percentage', 'gemiddelde_woningwaarde', 
                          'leefbarometer_score', 'social_economische_score_gemiddeld']
-
 analyse_gebied = deel_provincie_utrecht
-features = visualisatie_features
 aantal_voorspellingen = 3
 
+# prediction call api 
 def get_prediction(analyse_gebied, buurt, features, aantal_voorspellingen):
     # url = "http://0.0.0.0:8000/predict" #local testing
     url = "http://fastapp:8000/predict"
@@ -48,7 +47,6 @@ buurt = st.selectbox('Welke buurt wil je analyseren?',
 
 if buurt != '<select>':
     with st.spinner('Nog even wachten, de kaart wordt geladen...'):
-        # do api-call
         response = get_prediction(analyse_gebied, buurt, features, aantal_voorspellingen)
         html_map = BeautifulSoup(response, "html.parser") 
 
