@@ -1,13 +1,12 @@
 ### Introduction
-Still trying to look for a house and somethimes we pass a very nice neighborhoud. So the question I tried to answer was, if we like specific buurt in our province; can we find others that are look a likes?  
+Still trying to look for a house and somethimes we pass a very nice neighborhood. So the question I tried to answer was, if we like specific buurt in our province; can we find others that are look a likes?  
 This way creating a recommendersytem for buurten based on specific demographics of the place.
 
 #### Starting date
 Dec 1, 2022
 
 #### Context
-To be able to analyse what several aspects within 'buurten', I collected data from several sources:
-
+To be able to analyse several aspects within 'buurten', I collected data from various sources:
 * Open CBS data: https://www.cbs.nl/nl-nl/achtergrond/2022/14/statusscore-per-wijk-en-buurt-o-b-v-welvaart-opleidingsniveau-en-arbeid
 * Leefbarometer score: https://www.leefbaarometer.nl/tabel.php?indicator=Leefbaarheidssituatie&schaal=Buurt&gemeente=GM0344
 * Geluidsblootstelling: https://statline.rivm.nl/portal.html?_la=nl&_catalog=RIVM&tableId=50066NED&_theme=96
@@ -15,8 +14,7 @@ To be able to analyse what several aspects within 'buurten', I collected data fr
 * Tevredenheidscores: https://opendata.cbs.nl/statline/#/CBS/en/dataset/84571ENG/table
 
 **Input features eventually used:**
-
->    ['buurt_code', 'gm_naam', 'regio', 'aantal_inwoners', 'aantal_inwoners_tussen_25_44_percentage',
+>    ['aantal_inwoners', 'aantal_inwoners_tussen_25_44_percentage',
 >    'aantal_huishoudens_met_kinderen_percentage', 'gemiddelde_huishoudensgrootte', 'woningvoorraad',
 >    'gemiddelde_woningwaarde', 'meergezinswoning_percentage', 'bewoond_percentage', 'koopwoning_percentage',
 >    'bouwjaar_vanaf_2000_percentage', 'afstand_tot_ziekenhuis_km', 'afstand_tot_grote_supermarkt_km', 'afstand_tot_cafe_km',
@@ -28,17 +26,19 @@ To be able to analyse what several aspects within 'buurten', I collected data fr
 >    'geluid_van_weg']
 
 #### Results
-to do: write up cosine similarity results
-
-#### Application
-Two options
-1. demo streamlit app via their cloud: https://utrechtbuurten.streamlit.app/
-2. Run or deploy docker app with fastapi backend and streamlit frontend (docker compose up).
+For each buurt we recommend 3 neighborhoods that are look a likes based on the input variables above:
 
 <p align="center" width="100%">
     <img width="75%" src="img/buurtrecommender.png">
 </p>
 
-   
+To visualize relevant info, I decided to select 5 variables that are demonstrated per buurt.
+However, note that the anlaysis is done on all the variables and not just these 5.
+
+#### Application
+Two options:
+1. demo streamlit app via their cloud: https://utrechtbuurten.streamlit.app/
+2. Run or deploy docker app with fastapi backend and streamlit frontend (docker compose up).
+
 #### Tech and Tools
 recommender systemts, streamlit, fastapi
