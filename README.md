@@ -40,8 +40,8 @@ However, note that the anlaysis is done on all the variables and not just these 
 
 #### Application
 Two options:
-1. demo streamlit app via their cloud: https://utrechtbuurten.streamlit.app/
-2. Run or deploy docker app with fastapi backend and streamlit frontend (docker compose up).
+1. Demo folder for streamlit app via their cloud: https://utrechtbuurten.streamlit.app/
+2. Run or deploy docker app with Fastapi backend and Streamlit frontend (docker compose up).
 
 #### Tech and Tools
 Recommendersystems, Streamlit (cloud), Fastapi
