@@ -29,3 +29,4 @@ if buurt != '<select>':
         components.html(html_map, height=600, width=700)
 else:
     st.markdown('Wat is jouw favoriete buurt? Selecteer je buurt en de vergelijker doet zijn werk...')
+    st.image(image="img/lookalike.png", caption="Buurten Vergelijker")
