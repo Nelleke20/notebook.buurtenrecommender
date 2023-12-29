@@ -7,11 +7,11 @@ Dec 1, 2022
 
 #### Context
 To be able to analyse several aspects within 'buurten', I collected data from various sources:
-* Open CBS data: [Link naar cbs buurt en wijk dataset](https://www.cbs.nl/nl-nl/achtergrond/2022/14/statusscore-per-wijk-en-buurt-o-b-v-welvaart-opleidingsniveau-en-arbeid)
-* Leefbarometer score: https://www.leefbaarometer.nl/tabel.php?indicator=Leefbaarheidssituatie&schaal=Buurt&gemeente=GM0344
-* Geluidsblootstelling: https://statline.rivm.nl/portal.html?_la=nl&_catalog=RIVM&tableId=50066NED&_theme=96
-* Woningvoorraad: https://opendata.cbs.nl/statline/#/CBS/nl/dataset/83704NED/table
-* Tevredenheidscores: https://opendata.cbs.nl/statline/#/CBS/en/dataset/84571ENG/table
+* Open CBS data: [CBS buurt en wijk-dataset](https://www.cbs.nl/nl-nl/achtergrond/2022/14/statusscore-per-wijk-en-buurt-o-b-v-welvaart-opleidingsniveau-en-arbeid)
+* Leefbarometer score:[Leefbarometer dataset](https://www.leefbaarometer.nl/tabel.php?indicator=Leefbaarheidssituatie&schaal=Buurt&gemeente=GM0344)
+* Geluidsblootstelling: [RIVM geluidsoverlast-dataset](https://statline.rivm.nl/portal.html?_la=nl&_catalog=RIVM&tableId=50066NED&_theme=96)
+* Woningvoorraad: [CBS woningvoorraad-dataset](https://opendata.cbs.nl/statline/#/CBS/nl/dataset/83704NED/table)
+* Tevredenheidscores: [CBS sociaalecomischescore-datset](https://opendata.cbs.nl/statline/#/CBS/en/dataset/84571ENG/table)
 
 **Input features eventually used:**
 >    ['aantal_inwoners', 'aantal_inwoners_tussen_25_44_percentage',
