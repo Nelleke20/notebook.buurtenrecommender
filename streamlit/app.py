@@ -40,15 +40,15 @@ def get_prediction(analyse_gebied, buurt, features, aantal_voorspellingen):
     response = requests.post(url, json=data)
     # st.text(f'check health response:{response}')
     return response.text
-
-st.title('Buurten recommender')
-buurt = st.selectbox('Welke buurt wil je analyseren?',
+  
+st.title('Buurten Vergelijker')
+buurt = st.selectbox('Selecteer hieronder je favo-buurt: ',
     ('<select>', 'Oud Hoograven-Zuid', 'Voordorp en Voorveldsepolder', 'Slagen', 'Oorden', 'Poorten'))  
 
 if buurt != '<select>':
-    with st.spinner('Nog even wachten, de kaart wordt geladen...'):
-        print(analyse_gebied, buurt, features, aantal_voorspellingen)
-        response = get_prediction(analyse_gebied, buurt, features, aantal_voorspellingen)
+    with st.spinner('Even wachten, de kaart wordt geladen...'):
+        recommender = get_prediction(analyse_gebied, buurt, features, aantal_voorspellingen)
+        response = recommender.get_prediction(buurt)
         html_map = BeautifulSoup(response, "html.parser") 
 
         with open('output.html', 'w', encoding='utf-8') as file:
@@ -56,5 +56,10 @@ if buurt != '<select>':
 
         with open('output.html', 'r') as f:
             html_map = f.read()
-
-        components.html(html_map, height=600, width=700)    
+            
+        if html_map:
+            st.markdown('Viola, de volgende 3 buurten lijken op jouw favoriet: ')
+            components.html(html_map, height=600, width=700)
+else:
+    st.markdown('Wat is jouw favoriete buurt? Selecteer je buurt en de vergelijker doet zijn werk...')
+    # st.image(image=img, caption="Buurten Vergelijker") 

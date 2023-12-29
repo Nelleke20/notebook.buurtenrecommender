@@ -26,6 +26,7 @@ if buurt != '<select>':
 
         with open('output.html', 'r') as f:
             html_map = f.read()
+            
         if html_map:
             st.markdown('Viola, de volgende 3 buurten lijken op jouw favoriet: ')
             components.html(html_map, height=600, width=700)
