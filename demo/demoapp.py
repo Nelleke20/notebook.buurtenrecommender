@@ -28,7 +28,7 @@ if buurt != '<select>':
             html_map = f.read()
 
         if html_map:
-            st.markdown('De volgende 3 buurten lijken op jouw favoriet: ')
+            st.markdown('De volgende drie buurten lijken op jouw favoriet: ')
             # components.html(html_map, height=350, width=350) # tel
             components.html(html_map, height=600, width=700) # web version
 
