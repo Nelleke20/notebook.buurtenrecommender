@@ -11,3 +11,4 @@ fastapi/app/buurten.csv
 fastapi/app/map/
 old
 notebooks/old
+notebooks/*.png
