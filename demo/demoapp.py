@@ -9,6 +9,7 @@ from utils import Predictor
 # path settings
 bp = Path(__file__).parent / "demodata/buurten.csv"
 mp = Path(__file__).parent / "demodata/map/buurt_2020_v3.shp"
+img = Path(__file__).parent / "img/lookalike.png"
 
 st.title('Buurten Vergelijker')
 buurt = st.selectbox('Selecteer hieronder je favo-buurt: ',
@@ -29,4 +30,5 @@ if buurt != '<select>':
         components.html(html_map, height=600, width=700)
 else:
     st.markdown('Wat is jouw favoriete buurt? Selecteer je buurt en de vergelijker doet zijn werk...')
-    st.image(image="img/lookalike.png", caption="Buurten Vergelijker")
+    st.image(image=im, caption="Buurten Vergelijker")
+    
