@@ -27,7 +27,7 @@ As we have several features that we found important (and based on some EDA), I d
 >    'geluid_van_weg']
 
 #### Results
-For each buurt we recommend 3 neighborhoods that are look a likes (determined by the cosine similarity score) based on the input variables above:
+For each buurt we recommend 3 neighborhoods that are look-a-likes (determined by the cosine similarity score) based on the input variables above:
 
 <p align="center" width="100%">
     <img width="75%" src="img/buurtrecommender.png">
@@ -42,4 +42,4 @@ Two options:
 2. Run or deploy docker app with fastapi backend and streamlit frontend (docker compose up).
 
 #### Tech and Tools
-recommender systemts, streamlit, fastapi
+Recommendersystems, Streamlit (cloud), Fastapi
