@@ -40,7 +40,8 @@ def get_prediction(analyse_gebied, buurt, features, aantal_voorspellingen):
     response = requests.post(url, json=data)
     # st.text(f'check health response:{response}')
     return response.text
-  
+
+# actual streamlit code
 st.title('Buurten Vergelijker')
 buurt = st.selectbox('Selecteer hieronder je favo-buurt: ',
     ('<select>', 'Oud Hoograven-Zuid', 'Voordorp en Voorveldsepolder', 'Slagen', 'Oorden', 'Poorten'))  
@@ -56,7 +57,7 @@ if buurt != '<select>':
 
         with open('output.html', 'r') as f:
             html_map = f.read()
-            
+
         if html_map:
             st.markdown('Viola, de volgende 3 buurten lijken op jouw favoriet: ')
             components.html(html_map, height=600, width=700)
