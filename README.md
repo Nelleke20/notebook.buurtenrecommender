@@ -40,7 +40,7 @@ However,do note that the analysis is done on all the variables and not just thes
 
 #### Application
 Two options:
-1. Demo folder for streamlit app via their cloud: https://utrechtbuurten.streamlit.app/
+1. Demo folder for streamlit app via their cloud: https://buurten.streamlit.app/
 2. Run or deploy docker app with Fastapi backend and Streamlit frontend (docker compose up).
 
 #### Tech and Tools
