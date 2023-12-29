@@ -10,8 +10,8 @@ from utils import Predictor
 bp = Path(__file__).parent / "demodata/buurten.csv"
 mp = Path(__file__).parent / "demodata/map/buurt_2020_v3.shp"
 
-st.title('Buurten Vergelijkings Adviseur')
-buurt = st.selectbox('WElke buurt is je favori buurt wil je analyseren?',
+st.title('Buurten Vergelijker')
+buurt = st.selectbox('Wat is jouw favoriete buurt? Selecteerd hieronder je buurt voor de vergelijker: ',
     ('<select>', 'Oud Hoograven-Zuid', 'Voordorp en Voorveldsepolder', 'Slagen', 'Oorden', 'Poorten'))  
 
 if buurt != '<select>':
@@ -28,4 +28,4 @@ if buurt != '<select>':
 
         components.html(html_map, height=600, width=700)
 else:
-    st.markdown('geef in het dropdown menu aan welke buurt in de provincie Utrecht je wilt vergelijken')
+    st.markdown('GWat is jouw favoriete buurt? Selecteerd hieronder je buurt voor de vergelijker:')
