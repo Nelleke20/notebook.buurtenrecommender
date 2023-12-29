@@ -16,7 +16,7 @@ drop_buurten_houten = ['Buitengebied Houten West', 'Buitengebied Houten Oost', "
 app = FastAPI()
 
 class Data(BaseModel):
-    analyse_gebied: str
+    analyse_gebied: list
     buurt: str
     features: list
     aantal_voorspellingen: int
@@ -29,9 +29,10 @@ def main():
 # defining prediction endpoint
 @app.post("/predict", response_class=HTMLResponse)
 def predict(data: Data):
+    #settings
     file_path_map = 'map/buurt_2020_v3.shp'
     buurten = pd.read_csv('buurten.csv', index_col=0)  
-    gemeente_selectie = [data.analyse_gebied]  
+    gemeente_selectie = data.analyse_gebied  
     buurt_voor_selectie = data.buurt
     n_predictions = data.aantal_voorspellingen
     features_visualisatie = data.features.extend(['geometry', 'regio', 'buurt_code'])
@@ -59,7 +60,7 @@ def predict(data: Data):
             buurten= buurten,
             gem_map= gem_map
     )
-    output, recommendations_naam, code_van_buurt, recommendations, = recommender.list_and_plot_generator(buurt_voor_selectie, n_predictions)
+    recommendations_naam, code_van_buurt, recommendations, = recommender.list_and_plot_generator(buurt_voor_selectie, n_predictions)
 
     explore = utils.ExploreRecommender(    
         gem_map = gem_map, 

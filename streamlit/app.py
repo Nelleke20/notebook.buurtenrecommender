@@ -23,7 +23,7 @@ provincie_utrecht_gemeente =['Amersfoort','Baarn', 'Bunnik', 'Bunschoten', 'De B
 deel_provincie_utrecht = ['De Bilt', 'Houten', 'Nieuwegein', 'Utrecht', 'Zeist']
 features = ['aantal_inwoners', 'koopwoning_percentage', 'gemiddelde_woningwaarde', 
                          'leefbarometer_score', 'social_economische_score_gemiddeld']
-analyse_gebied = deel_provincie_utrecht
+analyse_gebied = deel_provincie_utrecht  #or use provincie_utrecht_gemeente
 aantal_voorspellingen = 3
 
 # prediction call api 
@@ -47,6 +47,7 @@ buurt = st.selectbox('Welke buurt wil je analyseren?',
 
 if buurt != '<select>':
     with st.spinner('Nog even wachten, de kaart wordt geladen...'):
+        print(analyse_gebied, buurt, features, aantal_voorspellingen)
         response = get_prediction(analyse_gebied, buurt, features, aantal_voorspellingen)
         html_map = BeautifulSoup(response, "html.parser") 
 

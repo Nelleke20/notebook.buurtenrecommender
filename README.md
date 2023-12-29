@@ -1,6 +1,6 @@
 ### Introduction
-As we are still trying to look for a house, we sometimes pass very nice neigborhoods and image living there. When there are not houses available in these neigborhoods, we wished to know other places which are jst as nice. Therefor I decided to build an app which would recommend likeminded neigborhoods. Doesn't that sound very practical?
-So the question I tried to answer was, if we like specific neigborhoods in our province; can we recommend other neigborhoods that are look a likes?  
+We sometimes pass very nice neigborhoods and imagined living there. At this point we are still trying to buy a house. When there are no houses available in these neigborhoods, we wished we would know other neigborhoods which are just as nice (and do have houses available). Therefore I decided to build an app which would recommend likeminded neigborhoods. Doesn't that sound very practical?
+So the question I tried to answer was: If we like specific neigborhoods in our province, what are other neigborhoods that are lookalikes, based on features that we find important?  
 
 #### Starting date
 Dec 1, 2022
@@ -21,7 +21,7 @@ As we have several features that we found important (and based on some EDA), I d
 >    'bouwjaar_vanaf_2000_percentage', 'afstand_tot_ziekenhuis_km', 'afstand_tot_grote_supermarkt_km', 'afstand_tot_cafe_km',
 >    'afstand_tot_kinderdagverblijf_km', 'afstand_tot_buitenschoolseopvang_km', 'afstand_tot_openbaar_groen_km',
 >    'afstand_tot_park_of_plantsoen_km', 'afstand_tot_bos_km','afstand_tot_hoofdverkeersweg_km', 'afstand_tot_treinstation_km',
->    'AfstandTotSemiOpenbaarGroenTotaal_83', 'leefbarometer_score', 'leefbarometer_fysieke_omgeving', 'leefbarometer_fysieke_overlast',
+>    'leefbarometer_score', 'leefbarometer_fysieke_omgeving', 'leefbarometer_fysieke_overlast',
 >    'leefbarometer_sociale_samenhang', 'leefbarometer_voorzieningen', 'aardgasverbruik_m3_gemiddeld', 
 >    'elektriciteitsverbruik_kwh_gemiddeld', 'social_economische_score_gemiddeld', 'geluid_van_treinverkeer', 
 >    'geluid_van_weg']

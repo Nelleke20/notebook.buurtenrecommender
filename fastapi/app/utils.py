@@ -60,6 +60,7 @@ class CosineRecommender():
         return buurten_indices, scores
 
     def _create_recommendation(self, input_buurt, n_predictions):
+        print(self.buurt_id)
         code_van_buurt = self.buurt_id.loc[self.buurt_id['regio'] == input_buurt, 'buurt_code'].item()
         cosine_sim_matrix = self._create_cosine_matrix() # create matrix
         buurten_indices, scores = self._get_highest_scores(code_van_buurt, cosine_sim_matrix, n_predictions)
