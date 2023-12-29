@@ -1,5 +1,6 @@
 ### Introduction
 We sometimes pass very nice neigborhoods and imagined living there. At this point we are still trying to buy a house. When there are no houses available in these neigborhoods, we wished we would know other neigborhoods which are just as nice (and do have houses available). Therefore I decided to build an app which would recommend likeminded neigborhoods. Doesn't that sound very practical?
+
 So the question I tried to answer was: If we like specific neigborhoods in our province, what are other neigborhoods that are lookalikes, based on features that we find important?  
 
 #### Starting date
@@ -14,6 +15,7 @@ To be able to analyse several aspects within 'buurten', I collected data from va
 * Tevredenheidscores: [CBS sociaalecomischescore-datset](https://opendata.cbs.nl/statline/#/CBS/en/dataset/84571ENG/table)
 
 **Input features eventually used:**
+
 As we have several features that we found important (and based on some EDA), I decided to use the following variables:
 >    ['aantal_inwoners', 'aantal_inwoners_tussen_25_44_percentage',
 >    'aantal_huishoudens_met_kinderen_percentage', 'gemiddelde_huishoudensgrootte', 'woningvoorraad',
