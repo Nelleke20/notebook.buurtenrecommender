@@ -34,6 +34,11 @@ to do: write up cosine similarity results
 Two options
 1. demo streamlit app via their cloud: https://utrechtbuurten.streamlit.app/
 2. Run or deploy docker app with fastapi backend and streamlit frontend (docker compose up).
+
+<p align="center" width="100%">
+    <img width="75%" src="img/buurtrecommender.png">
+</p>
+
    
 #### Tech and Tools
 recommender systemts, streamlit, fastapi
