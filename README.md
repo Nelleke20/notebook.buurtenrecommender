@@ -19,25 +19,16 @@ woningvoorraad: https://opendata.cbs.nl/statline/#/CBS/nl/dataset/83704NED/table
 tevredenheidscores: https://opendata.cbs.nl/statline/#/CBS/en/dataset/84571ENG/table
 
 > input features eventually used:
-
-['buurt_code', 'gm_naam', 'regio', 'aantal_inwoners',
-       'aantal_inwoners_tussen_25_44_percentage',
-       'aantal_huishoudens_met_kinderen_percentage',
-       'gemiddelde_huishoudensgrootte', 'woningvoorraad',
-       'gemiddelde_woningwaarde', 'meergezinswoning_percentage',
-       'bewoond_percentage', 'koopwoning_percentage',
-       'bouwjaar_vanaf_2000_percentage', 'afstand_tot_ziekenhuis_km',
-       'afstand_tot_grote_supermarkt_km', 'afstand_tot_cafe_km',
-       'afstand_tot_kinderdagverblijf_km',
-       'afstand_tot_buitenschoolseopvang_km', 'afstand_tot_openbaar_groen_km',
-       'afstand_tot_park_of_plantsoen_km', 'afstand_tot_bos_km',
-       'afstand_tot_hoofdverkeersweg_km', 'afstand_tot_treinstation_km',
-       'AfstandTotSemiOpenbaarGroenTotaal_83', 'leefbarometer_score',
-       'leefbarometer_fysieke_omgeving', 'leefbarometer_fysieke_overlast',
-       'leefbarometer_sociale_samenhang', 'leefbarometer_voorzieningen',
-       'aardgasverbruik_m3_gemiddeld', 'elektriciteitsverbruik_kwh_gemiddeld',
-       'social_economische_score_gemiddeld', 'geluid_van_treinverkeer',
-       'geluid_van_weg']
+>    ['buurt_code', 'gm_naam', 'regio', 'aantal_inwoners','aantal_inwoners_tussen_25_44_percentage',
+>    'aantal_huishoudens_met_kinderen_percentage', 'gemiddelde_huishoudensgrootte', 'woningvoorraad',
+>    'gemiddelde_woningwaarde', 'meergezinswoning_percentage', 'bewoond_percentage', 'koopwoning_percentage',
+>    'bouwjaar_vanaf_2000_percentage', 'afstand_tot_ziekenhuis_km', 'afstand_tot_grote_supermarkt_km', 'afstand_tot_cafe_km',
+>    'afstand_tot_kinderdagverblijf_km', 'afstand_tot_buitenschoolseopvang_km', 'afstand_tot_openbaar_groen_km',
+>    'afstand_tot_park_of_plantsoen_km', 'afstand_tot_bos_km','afstand_tot_hoofdverkeersweg_km', 'afstand_tot_treinstation_km',
+>    'AfstandTotSemiOpenbaarGroenTotaal_83', 'leefbarometer_score', 'leefbarometer_fysieke_omgeving', 'leefbarometer_fysieke_overlast',
+>    'leefbarometer_sociale_samenhang', 'leefbarometer_voorzieningen', 'aardgasverbruik_m3_gemiddeld', 
+>    'elektriciteitsverbruik_kwh_gemiddeld', 'social_economische_score_gemiddeld', 'geluid_van_treinverkeer', 
+>    'geluid_van_weg']
 
 #### Results
 to do: write up cosine similarity results
